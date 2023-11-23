@@ -14,7 +14,7 @@
         <tr><td>Password:</td><td><input type="text" name="password"/></td></tr>
         <tr><td>Username:</td><td><input type="text" name="username"/></td></tr>
         <tr><td>Email:</td><td><input type="text" name="email"/></td></tr>
-        <tr><td>Photo:</td><td><input type="text" name="photo"/></td></tr>
+        <tr><td>sex:</td><td><input type="text" name="sex"/></td></tr>
         <tr><td>Content:</td><td><textarea cols="50" rows="5" name="detail"></textarea></td></tr>
         <tr><td><a href="posts.jsp">View All Records</a></td><td align="right"><input type="submit" value="Add Post"/></td></tr>
     </table>

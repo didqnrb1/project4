@@ -10,7 +10,7 @@ public class MemberVO {
     private String password;
     private String email;
     private String blogurl;
-    private String photo;
+    private String sex;
     private String detail;
     private Date regdate;
 
@@ -62,12 +62,12 @@ public class MemberVO {
         this.blogurl = blogurl;
     }
 
-    public String getPhoto() {
-        return photo;
+    public String getsex() {
+        return sex;
     }
 
-    public void setPhoto(String photo) {
-        this.photo = photo;
+    public void setsex(String sex) {
+        this.sex = sex;
     }
 
     public String getDetail() {

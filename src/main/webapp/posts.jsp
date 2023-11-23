@@ -37,7 +37,7 @@
 	</script>
 </head>
 <body>
-<h1>2학년 2반 목록</h1>
+<h1>Member 목록</h1>
 <%
 	MemberDAO boardDAO = new MemberDAO();
 	List<MemberVO> list = boardDAO.getList();
@@ -49,6 +49,7 @@
 		<th>userID</th>
 		<th>userName</th>
 		<th>Email</th>
+		<th>sex</th>
 		<th>Registed date</th>
 
 	</tr>
@@ -58,6 +59,7 @@
 			<td>${u.getUserid()}</td>
 			<td>${u.getUsername()}</td>
 			<td>${u.getEmail()}</td>
+			<td>${u.getsex()}</td>
 			<td>${u.getRegdate()}</td>
 
 			<td><a href="editform.jsp?id=${u.getSid()}">Edit</a></td>
