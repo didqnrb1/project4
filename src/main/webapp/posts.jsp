@@ -28,6 +28,33 @@
 			background-color: #006bb3;
 			color: white;
 		}
+
+		.button {
+			display: inline-block;
+			padding: 8px 16px;
+			background-color: greenyellow;
+			color: white;
+			text-decoration: none;
+			border-radius: 4px;
+			transition: background-color 0.3s;
+		}
+
+		.button:hover {
+			background-color: #004080;
+		}
+
+		.button1 {
+			padding: 10px 15px;
+			background-color: #3498db;
+			color: white;
+			text-decoration: none;
+			border-radius: 5px;
+		}
+
+		.button1:hover {
+			background-color: #2980b9;
+		}
+
 	</style>
 	<script>
 		function delete_ok(id){
@@ -51,7 +78,7 @@
 		<th>Email</th>
 		<th>sex</th>
 		<th>Registed date</th>
-
+		<th class="action-column">Action</th>
 	</tr>
 	<c:forEach items="${list}" var="u">
 		<tr>
@@ -62,11 +89,15 @@
 			<td>${u.getsex()}</td>
 			<td>${u.getRegdate()}</td>
 
-			<td><a href="editform.jsp?id=${u.getSid()}">Edit</a></td>
-			<td><a href="javascript:delete_ok('${u.getSid()}')">Delete</a></td>
+			<td class="action-column">
+				<a class="button" href="editform.jsp?id=${u.getSid()}">Edit</a>
+				<a class="button" href="view.jsp?id=${u.getSid()}">View</a>
+				<a class="button" href="javascript:delete_ok('${u.getSid()}')">Delete</a>
+			</td>
 		</tr>
 	</c:forEach>
 </table>
-<br/><a href="addpostform.jsp">Add New Post</a>
+<br/>
+<a class="button1" href="addpostform.jsp">Add New Post</a>
 </body>
 </html>
